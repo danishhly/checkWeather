@@ -1,0 +1,174 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+/* Weather Form */
+.weatherForm {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cityInput {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ffffffaa;
+  border-radius: 8px;
+  outline: none;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.cityInput:focus {
+  border-color: #0077ff;
+}
+
+/* Submit Button */
+.weatherForm button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.weatherForm button:hover {
+  background-color: #005fcc;
+}
+
+/* Card */
+/* Card - Calmer Theme */
+/* Base card styles */
+.card {
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Weather-based background styles */
+.sunny {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+}
+
+.cloudy {
+  background: linear-gradient(135deg, #d7d2cc, #304352);
+}
+
+.rainy {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+}
+
+.thunderstorm {
+  background: linear-gradient(135deg, #373b44, #4286f4);
+}
+
+.snowy {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #333;
+}
+
+.clear {
+  background: linear-gradient(135deg, #56ccf2, #2f80ed);
+}
+
+.misty {
+  background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+}
+
+/* Text Styles - Softer Colors */
+.cityDisplay {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50; /* Deep slate */
+}
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: #ffffff22;
+  transform: scale(1.05);
+}
+
+.tempDisplay {
+  font-size: 24px;
+  color: #2980b9; /* Calm blue */
+  font-weight: bold;
+}
+
+.humidityDisplay,
+.descDisplay {
+  font-size: 18px;
+  color: #34495e; /* Muted dark blue-gray */
+}
+
+.weatherEmoji {
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+.errorDisplay {
+  font-size: 18px;
+  color: #e74c3c; /* Soft red */
+  font-weight: bold;
+}
+
+
+/* Icon Image (if you use weather icons) */
+.weatherIcon {
+    font-size: 4rem;;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 10px auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .cityInput, .weatherForm button {
+    width: 100%;
+  }
+}
